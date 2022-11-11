@@ -7,3 +7,98 @@
 body{
     font-family: 'Sono', sans-serif;;
 }
+
+/* nav code here */
+
+nav{
+   
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(39, 8, 67);
+    height: 85px;
+    padding: 0 100px 0 30px;
+    align-items: center;
+    
+}
+nav div h2{
+       font-size: 30px;
+       color: white;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding: 0 15px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+
+   
+}
+nav ul li a:hover, nav ul li a.first-li{
+    background-color: rgb(98, 82, 82);
+    
+}
+
+nav ul li{
+    list-style: none; 
+    
+}
+nav ul{
+    display: flex;
+  
+   
+   
+}
+#click{
+    display: none;
+}
+.menu-bar{
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+/* responsive work here */
+
+@media only screen and (max-width:1000px){
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+        transition: all 0.5s  ease-in-out;
+    }
+    nav ul li{
+        margin: 40px 0;
+    }
+    nav ul li a{
+        font-size: 30px;
+    }
+    nav ul li a:hover{
+        background: none;
+        color: red;
+    }
+    .menu-bar{
+        display: block;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    #click:checked ~ .menu-bar i::before{
+        content: "\f00d";
+    }
+}
+ header {
+  background-image: url(images/response.jpg);
+      background-size: cover;
+      background-position: center;
+     height: 90vh;
+    
+ }
